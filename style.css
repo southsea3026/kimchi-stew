@@ -1,0 +1,20 @@
+/* 버튼 스타일 설정 */
+.styled-button {
+  /* 폰트 설정 */
+  font-family: Arial, sans-serif;
+  font-size: 40px; /* 폰트 크기 설정 */
+  /* 패딩 설정 */
+  /* padding: 90px 221px 90px 221px; */
+  /* 크기 설정 */
+  width: 211px;
+  height: 90px;
+  /* 가운데 정렬 */
+  text-align:center;
+  /* 배경색과 텍스트 색 설정 */
+  background-color: gray;
+  color: #ffffff;
+  /* 다양한 스타일 설정 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
