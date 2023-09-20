@@ -10,38 +10,67 @@
 
 /* 버튼 스타일 설정 */
 .styled-button {
-  /* 폰트 설정 */
-  font-family: Arial, sans-serif;
-  font-size: 40px; /* 폰트 크기 설정 */
-  /* 크기 설정 */
+  font-size: 40px;
   width: 211px;
   height: 90px;
-  /* 텍스트를 수평 가운데 정렬합니다 */
-  align-items: center;
-  /* 가운데 정렬 */
-  text-align:center;
-  /* 배경색과 텍스트 색 설정 */
-  background-color: gray;
-  color: #ffffff;
-  /* 다양한 스타일 설정 */
+  align-items: center;  /* 텍스트를 수평 가운데 정렬 */
+  text-align:center;  /* 가운데 정렬 */
+  background-color: lightgray;
+  color: black;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 
 /* 로고 스타일 설정 */
 .logocircle {
+  font-size: 50px;
+  width: 215px;
+  height: 143px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 215px;
-  height: 143px;
-  background-color: #007bff; /* 동그라미의 배경색 */
-  border-radius: 50%; /* 이 속성으로 요소를 동그라미 모양으로 만듭니다. */
+  background-color: lightgray;
+  color: black;
+  border-radius: 50%;
 }
 
 
 .yas {
-  height: 180px;
+  height: 160px;
+}
+
+
+@media (max-width: 768px) {
+  /* 버튼 스타일 설정 */
+.styled-button {
+  font-size: 24px;
+  width: 126.6px;
+  height: 54px;
+  align-items: center;  /* 텍스트를 수평 가운데 정렬 */
+  text-align:center;  /* 가운데 정렬 */
+  background-color: lightgray;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+
+/* 로고 스타일 설정 */
+.logocircle {
+  font-size: 30px;
+  width: 129px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  color: black;
+  border-radius: 50%;
+}
+
+
+.yas {
+  height: 96px;
+}
 }
