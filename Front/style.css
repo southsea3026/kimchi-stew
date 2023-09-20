@@ -1,23 +1,28 @@
 /* 스타일 시트 (style.css) */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 수평 가운데 정렬 */
-  justify-content: center; /* 수직 가운데 정렬 */
-  height: 100vh; /* 화면 높이 전체를 사용하여 가운데 정렬 */
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgKIsgMTnncpDX5c683rH-k6OAT5FhxuzrR0OKmL0XMA&s');
+  background-size: 390px 844px;
+  width: 390px;
+  height: 844px;
+  margin-top: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 
-/* 버튼 스타일 설정 */
-.styled-button {
-  font-size: 40px;
-  width: 211px;
-  height: 90px;
-  align-items: center;  /* 텍스트를 수평 가운데 정렬 */
-  text-align:center;  /* 가운데 정렬 */
+/* 날짜 스타일 설정 */
+.daybox {
+  position: relative;
+  font-size: 30px;
+  width: 70px;
+  height: 40px;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   background-color: lightgray;
-  color: black;
-  border: none;
+  padding: 10px;
   border-radius: 5px;
 }
 
@@ -25,52 +30,38 @@
 /* 로고 스타일 설정 */
 .logocircle {
   font-size: 50px;
-  width: 215px;
-  height: 143px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: lightgray;
   color: black;
   border-radius: 50%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 140px;
 }
 
 
-.yas {
-  height: 160px;
-}
-
-
-@media (max-width: 768px) {
-  /* 버튼 스타일 설정 */
+/* 버튼 스타일 설정 */
 .styled-button {
-  font-size: 24px;
-  width: 126.6px;
-  height: 54px;
-  align-items: center;  /* 텍스트를 수평 가운데 정렬 */
-  text-align:center;  /* 가운데 정렬 */
+  font-size: 30px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: lightgray;
   color: black;
   border: none;
   border-radius: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 
-/* 로고 스타일 설정 */
-.logocircle {
-  font-size: 30px;
-  width: 129px;
-  height: 85px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: lightgray;
-  color: black;
-  border-radius: 50%;
+.blank {
+  height: 100px;
 }
 
-
-.yas {
-  height: 96px;
-}
+.blank2 {
+  height: 160px;
 }
