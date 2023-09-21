@@ -78,6 +78,14 @@
   height: 50px;
 }
 
+.blank4 {
+  height: 90px;
+}
+
+.blank5{
+  height: 65%;
+}
+
 
 /* 선택창 스타일 설정 */
 .choice-container {
@@ -97,7 +105,7 @@
 
 /* 텍스트창 스타일 설정 */
 .text-container {
-  height: 280px;
+  height: 150px;
   width: 330px;
   background-color: lightgray;
   color: black;
