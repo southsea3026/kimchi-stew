@@ -1,0 +1,119 @@
+/* 스타일 시트 (style.css) */
+.wrap {
+    height: 100vh;
+}
+
+.container {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgKIsgMTnncpDX5c683rH-k6OAT5FhxuzrR0OKmL0XMA&s');
+    background-size: 390px 844px;
+    width: 390px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.container-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* 날짜 스타일 설정 */
+.daybox {
+    position: relative;
+    font-size: 30px;
+    width: 70px;
+    height: 40px;
+    left: 10px;
+    top: 10px;
+    background-color: lightgray;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 로고 스타일 설정 */
+.logocircle {
+    font-size: 35px;
+    height: 100px;
+    width: 300px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+}
+  
+/* 버튼 스타일 설정 */
+.styled-button {
+    font-size: 30px;
+    line-height: 75px;
+    height: 75px;
+    width: 150px;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+  
+.blank {
+    height: 20%;
+}
+
+.blank2 {
+    height: 210px;
+}
+  
+.blank3 {
+    height: 50px;
+}
+  
+.blank4 {
+    height: 90px;
+}
+  
+.blank5{
+    height: 65%;
+}
+  
+/* 선택창 스타일 설정 */
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice {
+    height: 90px;
+    width: 200px;
+    background-color: lightgray;
+    color: black;
+}
+
+/* 텍스트창 스타일 설정 */
+.text-container {
+    height: 150px;
+    width: 330px;
+    background-color: lightgray;
+    color: black;
+    margin: 0 auto;
+}
+  
+.text-name {
+    position: relative;
+    height: 10%;
+    width: 60px;
+    left: 10px;
+    top: 10px;
+    color: black;
+}
+
+.text-text {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
