@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import StoryDb, Total
+from .models import textStory
 
 class StoryDbAdmin(admin.ModelAdmin):
-    search_fields = ['subject']
+    search_fields = ['text']
 
-admin.site.register(StoryDb, StoryDbAdmin)
-admin.site.register(Total)
+admin.site.register(textStory, StoryDbAdmin)

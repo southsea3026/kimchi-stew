@@ -1,12 +1,6 @@
 from django.db import models
+from django.utils import timezone
 
-class StoryDb(models.Model):
-    subject = models.CharField(max_length=200)
-    content = models.TextField()
-    create_date = models.DateTimeField()
-
-    def __str__(self):
-        return self.subject
-
-class Total(models.Model):
-    score = models.IntegerField()
+class textStory(models.Model):
+    text = models.TextField()
+    create_date = models.DateTimeField(default=timezone.now)

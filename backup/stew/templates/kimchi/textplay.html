@@ -1,16 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<!-- 컨텐츠를 감싸는 컨테이너 -->
 <div class="wrap">
     <div class="container-container">
-        <!-- 컨텐츠를 감싸는 컨테이너 -->
         <div class="container">
             <div class="daybox">날짜</div>
             <div class="blank5"></div>
             <div class="text-container">
                 <div class="text-name">이름</div>
-                <div class="text-text">텍스트뭐하지더뭐해야되무</div>
+                <div class="text-text">
+                    <h1>text play</h1>
+                    <p>{{ current_story.text }}</p>
+                    <p>Score: {{ score }}</p>
+                    <form method="post">
+                        {% csrf_token %}
+                        <button type="submit" name="choice" value="A">Choose A</button>
+                        <button type="submit" name="choice" value="B">Choose B</button>
+                    </form>
+                    <form method="post">
+                        {% csrf_token %}
+                        <button type="submit" name="next_story" value="true">Next Story</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
