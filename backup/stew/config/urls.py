@@ -20,5 +20,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('kimchi/', include('kimchi.urls')),
 ]
-
-handler404 = 'kimchi.views.page_not_found'
