@@ -4,18 +4,19 @@
 }
 
 
-.container {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgKIsgMTnncpDX5c683rH-k6OAT5FhxuzrR0OKmL0XMA&s');
-  background-size: 390px 844px;
-  width: 390px;
-  height: 100%;
-  margin: 0 auto;
-}
-
-
 .container-container {
   width: 100%;
   height: 100%;
+  font-family: 'Gowun Batang', serif;
+}
+
+
+.container {
+  background-size: 390px 844px;
+  background-color: #3C465C;
+  width: 390px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 
@@ -52,15 +53,55 @@
 
 /* 버튼 스타일 설정 */
 .styled-button {
-  font-size: 30px;
-  line-height: 75px;
+  position: relative;
+  margin: 0 auto;
   height: 75px;
   width: 150px;
-  background-color: lightgray;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  margin: 0 auto;
+  background-color: #3C465C;
+  color: #78FFCD;
+  border: .10em solid #78FFCD;
+  border-radius: 5em;
+  font-size: 1.3em;
+  line-height: 2em;
+  cursor:pointer;
+  font-family: 'Gowun Batang', serif;
+}
+
+.dot {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  border-radius: 100%;
+  transition: all 300ms ease;
+  display: none;
+}
+
+.dot:after {
+  content: '';
+  position: absolute;
+  left: calc(50% - .4em);
+  top: -.4em;
+  height: .8em;
+  width: .8em;
+  background: #78FFCD;
+  border-radius: 1em;
+  border: .10em solid #fff;
+  box-shadow: 0 0 .3em #fff, 0 0 0.7em #78FFCD;
+}
+
+.styled-button:hover .dot, .styled-button:focus .dot {
+  animation:  atom 2s infinite linear;
+  display: block;
+}
+
+@keyframes atom {
+  0% {transform: translateX(0) rotate(0);}
+  30%{transform: translateX(75px) rotate(0);}
+  50% {transform: translateX(75px) rotate(180deg);}
+  80% {transform: translateX(0) rotate(180deg);}
+  100% {transform: translateX(0) rotate(360deg);}
 }
 
 
@@ -70,7 +111,7 @@
 
 
 .blank2 {
-  height: 210px;
+  height: 270px;
 }
 
 
