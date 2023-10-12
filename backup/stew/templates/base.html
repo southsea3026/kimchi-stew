@@ -9,30 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saint</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Kimchi Stew</title>
 </head>
 <body>
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 {% block content %}
-    <div class="wrap">
-        <div class="container-container">
-            <!-- 컨텐츠를 감싸는 컨테이너 -->
-            <div class="container">
-                <!-- 로고 텍스트 -->
-                <div class="blank"></div>
-                <h1 class="logocircle">세인트 키우기</h1>       
-                <div class="blank2"></div>
-
-                <!-- 버튼 -->
-                <button class="start_btn" onClick="location.href='text-play.html'">시작하기</button>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
 </body>
