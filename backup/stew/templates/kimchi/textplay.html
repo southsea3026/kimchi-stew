@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<p>Score: {{ request.session.score }}</p>
     <div class="base-container">
         <div class="daybox">날짜</div>
         <button class="reset" onclick="window.location.href='{% url 'kimchi:textplay_reset' %}'">처음으로</button>
@@ -22,24 +22,15 @@
 
     <div class="blank5"></div>
 
-    <button class="text-container">
-        <div class="text-name">이름</div>
-        <div class="text-text" onclick="window.location.href='{% url 'kimchi:textplay' %}'">텍스트뭐하지더뭐해야되무</div>
-    </button>
-
-{% if next_text %}
-
-    <p>{{ next_text.text }}</p>
-    <p>Score: {{ request.session.score }}</p>
-    {% if next_text.block == 'A' %}
-        <a href="{% url 'kimchi:increase_score' 1 %}">A</a>
-        <a href="{% url 'kimchi:increase_score' 2 %}">B</a>
-    {% elif next_text.block == 'B' %}
-         <h3></h3>
+        {% if next_text.block == 'A' or next_text.block == 'B' %}    
+        <button class="text-container">
+            <div class="text-name">이름</div>
+            <div class="text-text" onclick="window.location.href='{% url 'kimchi:textplay' %}'">텍스트뭐하지더뭐해야되무</div>
+        </button>
+        {% else %}
+        <div class="theend-container">
+            <button class="theend" onclick="window.location.href='{% url 'kimchi:end' %}'">GG</button>
+        </div>
     {% endif %}
-{% else %}
-    <p>끝</p>
-{% endif %}
-    <a href="{% url 'kimchi:textplay' %}">다음</a>
-    <a href="{% url 'kimchi:textplay_reset' %}">처음으로</a>
+
 {% endblock %}
