@@ -1,19 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-    <!-- 컨텐츠를 감싸는 컨테이너 -->
-    <div class="wrap">
-        <div class="container-container">
-            <!-- 컨텐츠를 감싸는 컨테이너 -->
-            <div class="container">
-                <div class="daybox">날짜</div>
-                <div class="blank5"></div>
-                <button class="text-container">
-                    <div class="text-name">이름</div>
-                    <div class="text-text">텍스트뭐하지더뭐해야되무</div>
-                </button>
-            </div>
-        </div>
+
+    <div class="base-container">
+        <div class="daybox">날짜</div>
+        <button class="reset" onclick="window.location.href='{% url 'kimchi:textplay_reset' %}'">처음으로</button>
+    </div>  
+
+    <div class="blank4"></div>
+
+    <div class="choice-container">
+        {% if next_text %}
+            {% if next_text.block == 'A' %}        
+            <button class="choice" onclick="window.location.href='{% url 'kimchi:increase_score' 2 %}'">그래</button>
+            <div class="blank3"></div>
+            <button class="choice" onclick="window.location.href='{% url 'kimchi:increase_score' 1 %}'">싫어</button>
+            {% elif next_text.block == 'B' %}
+            <div class="blank2"></div>
+            {% endif %}
+        {% endif %}
     </div>
+
+    <div class="blank5"></div>
+
+    <button class="text-container">
+        <div class="text-name">이름</div>
+        <div class="text-text" onclick="window.location.href='{% url 'kimchi:textplay' %}'">텍스트뭐하지더뭐해야되무</div>
+    </button>
+
 {% if next_text %}
 
     <p>{{ next_text.text }}</p>
@@ -22,11 +35,11 @@
         <a href="{% url 'kimchi:increase_score' 1 %}">A</a>
         <a href="{% url 'kimchi:increase_score' 2 %}">B</a>
     {% elif next_text.block == 'B' %}
-         <h3>선택불가</h3>
+         <h3></h3>
     {% endif %}
 {% else %}
     <p>끝</p>
 {% endif %}
-<a href="{% url 'kimchi:textplay' %}">다음</a>
-<a href="{% url 'kimchi:textplay_reset' %}">처음으로</a>
+    <a href="{% url 'kimchi:textplay' %}">다음</a>
+    <a href="{% url 'kimchi:textplay_reset' %}">처음으로</a>
 {% endblock %}

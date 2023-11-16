@@ -8,14 +8,20 @@
     <!-- kimchi CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <title>Kimchi Stew</title>
 </head>
 <body>
+    <div class="wrap">
+        <div class="container-container">
+            <div class="container">
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 {% block content %}
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
